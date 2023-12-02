@@ -1,0 +1,213 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: #ccc;
+	
+}
+.navbar{
+	z-index: 999; /* Ensure the navigation bar is above other elements */
+}
+.navbar ul{
+	list-style: none;
+	padding: 0;
+	background: #ccc;
+	margin:0; 
+	text-align:center;
+	 z-index: 999; /* Ensure the navigation bar is above other elements */
+}
+
+.navbar .logIn{
+	text-align: right;
+	margin-left: 130%;
+	font-size:18px;
+	text-transform: capitalize;
+	text-decoration: underline;
+	
+}
+
+.navbar img{
+	width:5%;
+	height: 10%;
+	float:left;
+	border-radius:50%;
+	margin-left:4%;
+	margin-top:5px;
+}
+.navbar li{
+	display: inline-block;
+}
+
+.navbar a{
+	text-decoration: none;
+	color:#fff;
+	width:100px;
+	display:block;
+	padding:25px 20px;
+	font-size:15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position:sticky;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+/*end of navbar*/
+
+h1{
+	
+	text-align:center;
+}
+
+.container{
+	width: 80%;
+	height:auto;
+	margin:20px auto;
+	margin-left:220px;
+}
+
+/* Extra small devices (phones, 600px and down)*/ 
+@media only screen and (max-width: 600px) {
+  .container {
+	width: 100%;
+	height:auto;
+	margin:20px auto;
+	
+  }
+}
+/*Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+	.container {
+		width: 100%;
+		height:auto;
+		margin:20px auto;
+		margin-left:9px;
+	  }
+	  
+}
+
+.container .image{
+	position: relative;
+	width:260px;
+	height:auto;
+	background:black;
+	float:left;
+	margin:15px;
+	border-radius:10px;
+		box-sizing:border-box;
+	overflow:hidden;
+  background-size: cover; 
+  background-position: center;
+   display: flex; 
+  align-items: left; 
+  justify-content: left;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); 
+  
+}
+
+.container .image img{
+	width:100%;
+	height:330px;
+	 object-fit: cover;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+	.container .image img{
+		width:100%;
+		height:550px;
+		 object-fit: cover;
+	}
+	
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container .image{
+	position: relative;
+	width:200px;
+	height:auto;
+	background:black;
+	float:left;
+	margin:15px;
+	border-radius:10px;
+		box-sizing:border-box;
+	overflow:hidden;
+  background-size: cover; 
+  background-position: center;
+   display: flex; 
+  align-items: left; 
+  justify-content: left; 
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); 
+  
+}
+	
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 1000px) {
+	.container .image{
+		position: relative;
+		width:450px;
+		height:550px;
+		background:black;
+		float:left;
+		margin:15px;
+		border-radius:50px;
+			box-sizing:border-box;
+		overflow:hidden;
+	  background-size: cover; 
+	  background-position: center;
+	   display: flex; 
+	  align-items: left; 
+	  justify-content: left; 
+	  
+	}
+	  
+}
+
+
+.container .image .image-text{
+	font-size: 28px;
+  color: white;
+  padding: 10px;
+  margin-top:260px;
+  font-weight: bold;
+  
+}
+
+.container .image .image-texts{
+	font-size: 19px;
+}
+
+/* Bottom left text */
+.container .image .bottom-left {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 25px;
+  color: white;
+  padding: 10px;
+  margin-top:260px;
+  font-weight: bold;
+}
+
+.button{
+	border-radius:20px;
+	width:180px;
+	height:40px;
+	margin-left:600px;
+	border:none;
+	color:black;
+	align-items:center;
+}
