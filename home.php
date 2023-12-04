@@ -184,7 +184,7 @@ fade {
 <img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" >
 <ul>
 
- <li><a href="home.php">Home</a></li>
+ <li><a href="home.php">on</a></li>
  <li><a href="service.php">Service</a></li>
    <li><a href="contact.php">Contact us</a></li>
     <li><a href="aboutUs.php">About</a></li>
