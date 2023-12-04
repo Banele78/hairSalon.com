@@ -7,173 +7,12 @@ session_start();?>
 <meta http-equiv="X-UA-Compatible" content=IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="css/homeStyle.css">
 <style>
-  body{
-	margin: 0;
-	padding: 0;
-	background: #ccc;
-	font-family: Arial;	
-}
-.navbar{
-	z-index: 999; /* Ensure the navigation bar is above other elements */
-}
-.navbar ul{
-	list-style: none;
-	padding: 0;
-	background: #ccc;
-	margin:0; 
-	text-align:center;
-	 z-index: 999; /* Ensure the navigation bar is above other elements */
-}
-
-.navbar .logIn{
-	text-align: right;
-	margin-left: 130%;
-	font-size:18px;
-	text-transform: capitalize;
-	text-decoration: underline;
-	
-}
-
-.navbar img{
-	width:5%;
-	height: 10%;
-	float:left;
-	border-radius:50%;
-	margin-left:4%;
-	margin-top:5px;
-}
-.navbar li{
-	display: inline-block;
-}
-
-.navbar a{
-	text-decoration: none;
-	color:#fff;
-	width:100px;
-	display:block;
-	padding:25px 20px;
-	font-size:15px;
-	text-transform: uppercase;
-	font-weight: bold;
-	text-align: center;
-}
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position:sticky;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
-}
-/*end of navbar*/
-
-
-logo{
-padding:100px;
-font-size:50px;
-font-family:Tahoma;
-color:black;
-}
-
-body{
-background-color:#ccc;
-}
-
-.copy{
-justify-content:space-between;
-font-family: Tahoma;
-text-align:center;
-}
-
-.links{
-justify-content:space-between;
-font-family: Tahoma;
-text-align:center;
-}
-
-button{
-font-family:Tahoma;
-width:150px;
-padding:9px ;
-background:transparent;
-border-radius:10px;
-color:black;
-text-align:center;
-}
-
-.services{
-text-align:center;
-padding:10px;
-}
-
-
-button::hover{
-transition:0.5s;
-}
-
-h1{
-text-align:center;
-font-size:50px;
-font-family:Tahoma;
-color:black;
-}
-
-.slideshow-container {
- text-align:center;
-  position: relative;
-  margin: auto;
-  border-radius:30px;
-  padding:9px;
  
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color:#bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-   position: relative;
-  bottom: 20px;
-  left: 16px;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-
-/* Fading animation */
-fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-
 
 </style>
 
@@ -181,22 +20,41 @@ fade {
 
 <body>
 <div class="navbar" id="myNavbar">
-<img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" >
+<img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" class="left">
 <ul>
 
  <li><a href="home.php">on</a></li>
  <li><a href="service.php">Service</a></li>
    <li><a href="contact.php">Contact us</a></li>
     <li><a href="aboutUs.php">About</a></li>
-    <?php
+   
+ </ul>
+ <?php
     if(!isset($_SESSION["username"])){
     ?>
-    <li><a href="BHlogin.php" class="login"><?php echo "Log in"; ?></a></li>
+    <div><a href="BHlogin.php" class="login"><?php echo "Log in"; ?></a></div>
     <?php }else{?>
-      <li><a href="#" class="login"><?php echo "Hi". " ".$_SESSION["username"]; ?></a></li>
+      <div><a href="#" class="login"><?php echo "Hi". " ".$_SESSION["username"]; ?></a></div>
       <?php }?>
- </ul>
+<!--code for the mobile navbar-->
+      <div class="mobile" >
 
+<div class="toggle_btn">
+ <i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="name">
+ <li class=""> Banele</li>
+</div>
+</div>
+
+<!--dropDown menu for mobile navbar-->
+<div class="dropdown_menu ">
+ <li><a href="#about">About</a></li>
+ <li><a href="#project">Projects</a></li>
+ <li><a href="#contact">Contact</a></li>
+  <li><a href="BaneleCV.pdf" download="Banele Ndivhuwo Nhlapo CV" class="resume">My resume<i class="fa-solid fa-download" ></i></a></li>
+</div>
  </div>
 
 <div>
@@ -296,6 +154,21 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+//code to open and close the dropDown menu
+const toggleBtn=document.querySelector('.toggle_btn');
+const toggleBtnIcon=document.querySelector('.toggle_btn i');
+const dropDownMenu=document.querySelector('.dropdown_menu');
+
+toggleBtn.onclick=function(){
+  dropDownMenu.classList.toggle('open');
+  const isOpen=dropDownMenu.classList.contains('open');
+
+  //switch icons
+  toggleBtnIcon.classList=isOpen
+  ? 'fa-solid fa-xmark'
+  : 'fa-solid fa-bars'
 }
 
 
