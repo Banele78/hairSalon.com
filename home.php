@@ -35,7 +35,7 @@ session_start();?>
     ?>
     <div><a href="BHlogin.php" class="login"><?php echo "Log in"; ?></a></div>
     <?php }else{?>
-      <div><a href="#" class="login"><?php echo "Hi". " ".$_SESSION["username"]; ?></a></div>
+      <div><a href="#" class="login"><?php echo "Hi". ",".$_SESSION["username"]; ?></a></div>
       <?php }?>
 <!--code for the mobile navbar-->
       <div class="mobile" >
@@ -52,7 +52,7 @@ session_start();?>
 <?php
     if(isset($_SESSION["username"])){
     ?>
-    <div><?php echo "Hi". " ".$_SESSION["username"]; ?></div>
+    <div><?php echo "Hi". ",".$_SESSION["username"]; ?></div>
     <?php }?>
       </div>
 

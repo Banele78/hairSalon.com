@@ -27,7 +27,7 @@
     ?>
     <div><a href="BHlogin.php" class="login"><?php echo "Log in"; ?></a></div>
     <?php }else{?>
-      <div><a href="#" class="login"><?php echo "Hi". " ".$_SESSION["username"]; ?></a></div>
+      <div><a href="#" class="login"><?php echo "Hi". ",".$_SESSION["username"]; ?></a></div>
       <?php }?>
 
     
@@ -50,7 +50,7 @@
 <?php
     if(isset($_SESSION["username"])){
     ?>
-    <div><?php echo "Hi". " ".$_SESSION["username"]; ?></div>
+    <div><?php echo "Hi". ",".$_SESSION["username"]; ?></div>
     <?php }?>
       </div>
 
@@ -84,8 +84,8 @@ while($dt=mysqli_fetch_assoc($result_date2)){
     if (!empty($offlineDates)) {
       $offlineDatesString = implode(', ', $offlineDates);
 ?>
- <div class="message">
-<p>Please note that on the <?php echo  $offlineDatesString; ?>, the store will not be open.</p>
+ <div class="message" id="noti">
+<p >Please note that on the <?php echo  $offlineDatesString; ?>, the store will not be open.</p>
 </div>
  <?php
     }
@@ -174,6 +174,7 @@ window.onscroll = function() {myFunction()};
 
 // Get the navbar
 var navbar = document.getElementById("myNavbar");
+var nofication=document.getElementById("noti");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
@@ -181,7 +182,9 @@ var sticky = navbar.offsetTop;
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+  
+    navbar.classList.add("sticky");
+    
   } else {
     navbar.classList.remove("sticky");
   }
