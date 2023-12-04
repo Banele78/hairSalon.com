@@ -1,7 +1,7 @@
 <?php include('serverReset.php') ?>
 <html>
 <head>
-<link rel="stylesheet" href="bookStyle.css">
+<link rel="stylesheet" href="css/bookStyle.css">
 </head>
 
 <body>

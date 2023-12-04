@@ -11,6 +11,7 @@ session_start();?>
      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="css/homeStyle.css">
+      <link rel="stylesheet" href="css/navbar.css">
 <style>
  
 
@@ -42,8 +43,6 @@ session_start();?>
 <div class="toggle_btn">
  <i class="fa-solid fa-bars"></i>
 </div>
-
-     
 
 <div class="image">
 <img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" class="">

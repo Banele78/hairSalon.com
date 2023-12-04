@@ -1,7 +1,7 @@
 <?php include('serverPin.php') ?>
 <html>
 <head>
-<link rel="stylesheet" href="bookStyle.css">
+<link rel="stylesheet" href="css/bookStyle.css">
 </head>
 <style>
 .box{

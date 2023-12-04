@@ -1,7 +1,7 @@
 <?php include('serverForgotPassword.php') ?>
 <html>
 <head>
-<link rel="stylesheet" href="bookStyle.css">
+<link rel="stylesheet" href="css/bookStyle.css">
 
 <style>
 .box{

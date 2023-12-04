@@ -4,67 +4,7 @@ body{
 	background: #ccc;
 	
 }
-.navbar{
-	z-index: 999; /* Ensure the navigation bar is above other elements */
-}
-.navbar ul{
-	list-style: none;
-	padding: 0;
-	background: #ccc;
-	margin:0; 
-	text-align:center;
-	 z-index: 999; /* Ensure the navigation bar is above other elements */
-}
 
-.navbar .logIn{
-	text-align: right;
-	margin-left: 130%;
-	font-size:18px;
-	text-transform: capitalize;
-	text-decoration: underline;
-	
-}
-
-.navbar img{
-	width:5%;
-	height: 10%;
-	float:left;
-	border-radius:50%;
-	margin-left:4%;
-	margin-top:5px;
-}
-.navbar li{
-	display: inline-block;
-}
-
-.navbar a{
-	text-decoration: none;
-	color:#fff;
-	width:100px;
-	display:block;
-	padding:25px 20px;
-	font-size:15px;
-	text-transform: uppercase;
-	font-weight: bold;
-	text-align: center;
-}
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position:sticky;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
-}
-/*end of navbar*/
 
 .container{
 	width: 80%;

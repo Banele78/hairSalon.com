@@ -4,13 +4,20 @@
     <html>
       <head>
         <title>Login Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
         <style>
           body {
-            text-align: center;
-            font-family: Arial, sans-serif;
+           
             background-color: #ccc;
             margin: 0;
 	padding: 0;
+          }
+
+          .body{
+            text-align: center;
           }
           h1 {
       color: #000;
@@ -36,87 +43,68 @@
             display: block;
             margin-top: 20px;
           }
-          .navbar{
-	z-index: 999; /* Ensure the navigation bar is above other elements */
-}
-.navbar ul{
-	list-style: none;
-	padding: 0;
-	background: #ccc;
-	margin:0; 
-	text-align:center;
-	 z-index: 999; /* Ensure the navigation bar is above other elements */
-}
-
-.navbar .logIn{
-	text-align: right;
-	margin-left: 130%;
-	font-size:18px;
-	text-transform: capitalize;
-	text-decoration: underline;
-	
-}
-
-.navbar img{
-	width:5%;
-	height: 10%;
-	float:left;
-	border-radius:50%;
-	margin-left:4%;
-	margin-top:5px;
-}
-.navbar li{
-	display: inline-block;
-}
-
-.navbar a{
-	text-decoration: none;
-	color:#fff;
-	width:100px;
-	display:block;
-	padding:25px 20px;
-	font-size:15px;
-	text-transform: uppercase;
-	font-weight: bold;
-	text-align: center;
-}
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position:sticky;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
-}
-/*end of navbar*/
+         
         </style>
+         <link rel="stylesheet" href="css/navbar.css">
       </head>
       <body>
       <div class="navbar" id="myNavbar">
-<img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" >
+<img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" class="left">
 <ul>
 
  <li><a href="home.php">Home</a></li>
  <li><a href="service.php">Service</a></li>
-   <li><a href="contact.php">Contact us</a></li>
+   <li><a href="contact.php">Contact</a></li>
+    <li><a href="aboutUs.php">About</a></li>
+   
+ </ul>
+ <?php
+    if(!isset($_SESSION["username"])){
+    ?>
+    <div><a href="BHlogin.php" class="logIn"><?php echo "Log in"; ?></a></div>
+    <?php }else{?>
+      <div><a href="#" class="logIn"><?php echo "Hi". " ".$_SESSION["username"]; ?></a></div>
+      <?php }?>
+<!--code for the mobile navbar-->
+      <div class="mobile" >
+      
+<div class="toggle_btn">
+ <i class="fa-solid fa-bars"></i>
+</div>
+
+     
+
+<div class="image">
+<img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" class="">
+
+</div>
+<div class="name">
+<?php
+    if(isset($_SESSION["username"])){
+    ?>
+    <div><?php echo "Hi". " ".$_SESSION["username"]; ?></div>
+    <?php }?>
+      </div>
+
+</div>
+
+<!--dropDown menu for mobile navbar-->
+<div class="dropdown_menu ">
+<li><a href="home.php">Home</a></li>
+ <li><a href="service.php">Service</a></li>
+   <li><a href="contact.php">Contact</a></li>
     <li><a href="aboutUs.php">About</a></li>
     <?php
     if(!isset($_SESSION["username"])){
     ?>
-    <li><a href="BHlogin.php" class="logIn"><?php echo "Log in"; ?></a></li>
+    <li><a href="BHlogin.php" ><?php echo "Log in"; ?></a></li>
     <?php }else{?>
-      <li><a href="#" class="logIn"><?php echo "Hi". " ".$_SESSION["username"]; ?></a></li>
+      <li><a href="#" ><?php echo "Settings"; ?></a></li>
       <?php }?>
- </ul>
+
+</div>
  </div>
+ <div class="body">
  <h1>SALON STORY</h1>
     <p></p>
     <br />
@@ -141,6 +129,7 @@
         <a href="book.php" class="create-account"
           >Create an Account</a
         >
+ </div>
       </body>
       <script>
 // When the user scrolls the page, execute myFunction
@@ -159,6 +148,23 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
+}
+
+//code to open and close the dropDown menu
+const toggleBtn=document.querySelector('.toggle_btn');
+const toggleBtnIcon=document.querySelector('.toggle_btn i');
+const dropDownMenu=document.querySelector('.dropdown_menu');
+
+toggleBtn.onclick=function(){
+  dropDownMenu.classList.toggle('open');
+  document.body.style.overflowY = dropDownMenu.classList.contains("open") ? "hidden" : "auto";
+  const isOpen=dropDownMenu.classList.contains('open');
+ 
+
+  //switch icons
+  toggleBtnIcon.classList=isOpen
+  ? 'fa-solid fa-xmark'
+  : 'fa-solid fa-bars';
 }
 </script>
     </html>
