@@ -4,19 +4,25 @@ padding: 0;
 background: #ccc;
 
 }
+
+.header{
+    width:100%;
+    z-index: 999;
+    background-color: #ccc;
+}
 .navbar{
 	z-index: 999; /* Ensure the navigation bar is above other elements */
 
   height:60px;
-  max-width:1200px;
+  
   margin:0;
   display:flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 70px;
+  
   z-index: 999; /* Ensure the navigation bar is above other elements */
   transition: background-color 2s ease;
-  width:90%;
+  width:100%;
   
 
   background-color: #ccc;
@@ -36,16 +42,22 @@ background: #ccc;
 	width:100px;
 	display:block;
 	padding:25px 20px;
-	font-size:15px;
+	font-size:20px;
 	text-transform: uppercase;
 	font-weight: bold;
 	text-align: center;
 }
 
+.navbar a:hover{
+  
+    color: black;
+    font-size: 25px;
+  }
+
 .navbar .logIn{
 	text-align: right;
-	
-	font-size:18px;
+	margin-right: 60px;
+	font-size:22px;
 	text-transform: capitalize;
 	text-decoration: underline;
 	
@@ -56,7 +68,7 @@ background: #ccc;
 	height: 100%;
 
 	border-radius:50%;
-	
+	margin-left: 25px;
 	margin-top:5px;
 }
 
@@ -90,6 +102,7 @@ background: #ccc;
   
   position:absolute;
   left:1rem;
+  
 }
 
 .navbar .image img{
@@ -145,7 +158,7 @@ transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 .sticky {
   position:sticky;
   top: 0;
-  width: 90%;
+  width: 100%;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -182,3 +195,60 @@ a:link{
 color: #fff;
 text-decoration: none;
 }
+
+@media(max-width:999px){
+    .navbar{
+      margin-left: 0;
+      background: none;
+      margin-top:0px;
+      width: 100%;
+    }
+    .navbar ul{
+      display:none;
+    }
+   
+    .navbar .left{
+      display:none;
+    }
+  
+    .navbar .login{
+      display:none;
+    }
+  
+    .navbar .toggle_btn{
+      display:block;
+    }
+  
+    .dropdown_menu{
+      display:block;
+    }
+  
+    .navbar .image{
+      display:block;
+    }
+
+    .navbar .name{
+        display:block;
+    }
+  
+    .navbar .mobile{
+      display:block;
+    }
+    .navbar img{
+     
+        margin-left: 0px;
+      }
+    .sticky {
+  position:sticky;
+  top: 0;
+  width: 100%;
+}
+  }
+
+  @media(max-width:576px){
+    .slideshow-container img{
+        width:350px;
+        height:300px;
+    }
+  }
+

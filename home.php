@@ -23,9 +23,9 @@ session_start();?>
 <img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" class="left">
 <ul>
 
- <li><a href="home.php">on</a></li>
+ <li><a href="home.php">Home</a></li>
  <li><a href="service.php">Service</a></li>
-   <li><a href="contact.php">Contact us</a></li>
+   <li><a href="contact.php">Contact</a></li>
     <li><a href="aboutUs.php">About</a></li>
    
  </ul>
@@ -38,22 +38,41 @@ session_start();?>
       <?php }?>
 <!--code for the mobile navbar-->
       <div class="mobile" >
-
+      
 <div class="toggle_btn">
  <i class="fa-solid fa-bars"></i>
 </div>
 
-<div class="name">
- <li class=""> Banele</li>
+     
+
+<div class="image">
+<img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" class="">
+
 </div>
+<div class="name">
+<?php
+    if(isset($_SESSION["username"])){
+    ?>
+    <div><?php echo "Hi". " ".$_SESSION["username"]; ?></div>
+    <?php }?>
+      </div>
+
 </div>
 
 <!--dropDown menu for mobile navbar-->
 <div class="dropdown_menu ">
- <li><a href="#about">About</a></li>
- <li><a href="#project">Projects</a></li>
- <li><a href="#contact">Contact</a></li>
-  <li><a href="BaneleCV.pdf" download="Banele Ndivhuwo Nhlapo CV" class="resume">My resume<i class="fa-solid fa-download" ></i></a></li>
+<li><a href="home.php">Home</a></li>
+ <li><a href="service.php">Service</a></li>
+   <li><a href="contact.php">Contact</a></li>
+    <li><a href="aboutUs.php">About</a></li>
+    <?php
+    if(!isset($_SESSION["username"])){
+    ?>
+    <li><a href="BHlogin.php" ><?php echo "Log in"; ?></a></li>
+    <?php }else{?>
+      <li><a href="#" ><?php echo "Settings"; ?></a></li>
+      <?php }?>
+
 </div>
  </div>
 
@@ -67,20 +86,20 @@ session_start();?>
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
   
-    <img src="girls.jpg" style="width:700px; height:500px ">
+    <img src="girls.jpg" >
 	
 	
   </div>
 
   <div class="mySlides fade">
 
-    <img src="pic5.webp" style="width:700px; height:500px ">
+    <img src="pic5.webp">
    
   </div>
 
   <div class="mySlides fade">
     
-    <img src="salon.jpg" style="width:700px; height:500px ">
+    <img src="salon.jpg" >
   
 </div>
 <div style="text-align:center">
@@ -163,12 +182,14 @@ const dropDownMenu=document.querySelector('.dropdown_menu');
 
 toggleBtn.onclick=function(){
   dropDownMenu.classList.toggle('open');
+  document.body.style.overflowY = dropDownMenu.classList.contains("open") ? "hidden" : "auto";
   const isOpen=dropDownMenu.classList.contains('open');
+ 
 
   //switch icons
   toggleBtnIcon.classList=isOpen
   ? 'fa-solid fa-xmark'
-  : 'fa-solid fa-bars'
+  : 'fa-solid fa-bars';
 }
 
 
