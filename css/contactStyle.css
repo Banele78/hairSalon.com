@@ -2,9 +2,7 @@ body{
 	margin: 0;
 	padding: 0;
 	background: #ccc;
-	font-family: Arial;
-    overflow-y: auto;
-    	
+	
 }
 .navbar{
 	z-index: 999; /* Ensure the navigation bar is above other elements */
@@ -155,108 +153,43 @@ transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding-top: 60px;
 }
 /*end of navbar*/
-
-
-logo{
-padding:100px;
-font-size:50px;
-font-family:Tahoma;
-color:black;
+#sp{
+width: 690px;
+height: 550px;
+border: 1px solid black;
+float: right;
 }
-
-body{
-background-color:#ccc;
+img{
+float: left;
 }
-
-.copy{
-justify-content:space-between;
-font-family: Tahoma;
-text-align:center;
-}
-
-.links{
-justify-content:space-between;
-font-family: Tahoma;
-text-align:center;
-}
-
-button{
-font-family:Tahoma;
-width:150px;
-padding:9px ;
-background:transparent;
-border-radius:10px;
-color:black;
-text-align:center;
-}
-
-.services{
-text-align:center;
-padding:10px;
-}
-
-
-button::hover{
-transition:0.5s;
-}
-
-h1{
-text-align:center;
-font-size:50px;
-font-family:Tahoma;
-color:black;
-}
-
-.slideshow-container {
- text-align:center;
-  position: relative;
-  margin: auto;
-  border-radius:30px;
-  padding:9px;
- 
-}
-
-.slideshow-container img{
-    width:700px;
-    height:500px;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color:#bbb;
-  border-radius: 50%;
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 50px;
+   text-align: center;
+  text-decoration: none;
   display: inline-block;
-  transition: background-color 0.6s ease;
-   position: relative;
-  bottom: 20px;
-  left: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+input , textarea{
+border: 2px solid #000;
+border-radius: 6px;
+box-sizing: border-box;
+}
+p{
+font-size:45px;
+}
+.border{
+width: 1216px;
+height: 30px;
+color: white;
+background-color: #d1e0e0;
+padding: 2px;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-
-/* Fading animation */
-fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 
 @media(max-width:999px){
     .navbar{

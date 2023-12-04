@@ -1,10 +1,8 @@
 body{
-	margin: 0;
-	padding: 0;
-	background: #ccc;
-	font-family: Arial;
-    overflow-y: auto;
-    	
+    margin: 0;
+padding: 0;
+background: #ccc;
+
 }
 .navbar{
 	z-index: 999; /* Ensure the navigation bar is above other elements */
@@ -155,159 +153,32 @@ transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding-top: 60px;
 }
 /*end of navbar*/
-
-
-logo{
-padding:100px;
-font-size:50px;
-font-family:Tahoma;
-color:black;
+p{
+font-size: 50px;
+text-align: center;
 }
+.border{
+width: 1180px;
+height: 100px;
+background-color: #C0C0C0;
+color: #000000;
+font-family: verdana;
+padding-left: 25px;
+margin-left:30px;
 
-body{
-background-color:#ccc;
 }
-
-.copy{
-justify-content:space-between;
-font-family: Tahoma;
-text-align:center;
-}
-
-.links{
-justify-content:space-between;
-font-family: Tahoma;
-text-align:center;
-}
-
-button{
-font-family:Tahoma;
-width:150px;
-padding:9px ;
-background:transparent;
-border-radius:10px;
-color:black;
-text-align:center;
-}
-
-.services{
-text-align:center;
-padding:10px;
+.border1{
+height: 180px;
+width: 1180px;
+background-color: #E5E4E2;
+color: #000000;
+font-family: verdana;
+padding-left: 30px;
+margin-left:30px;
 }
 
 
-button::hover{
-transition:0.5s;
+a:link{
+color: #fff;
+text-decoration: none;
 }
-
-h1{
-text-align:center;
-font-size:50px;
-font-family:Tahoma;
-color:black;
-}
-
-.slideshow-container {
- text-align:center;
-  position: relative;
-  margin: auto;
-  border-radius:30px;
-  padding:9px;
- 
-}
-
-.slideshow-container img{
-    width:700px;
-    height:500px;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color:#bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-   position: relative;
-  bottom: 20px;
-  left: 16px;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-
-/* Fading animation */
-fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@media(max-width:999px){
-    .navbar{
-      margin-left: 0;
-      background: none;
-      margin-top:0px;
-      width: 100%;
-    }
-    .navbar ul{
-      display:none;
-    }
-   
-    .navbar .left{
-      display:none;
-    }
-  
-    .navbar .login{
-      display:none;
-    }
-  
-    .navbar .toggle_btn{
-      display:block;
-    }
-  
-    .dropdown_menu{
-      display:block;
-    }
-  
-    .navbar .image{
-      display:block;
-    }
-
-    .navbar .name{
-        display:block;
-    }
-  
-    .navbar .mobile{
-      display:block;
-    }
-
-    .sticky {
-  position:sticky;
-  top: 0;
-  width: 100%;
-}
-  }
-
-  @media(max-width:576px){
-    .slideshow-container img{
-        width:350px;
-        height:300px;
-    }
-  }
-
