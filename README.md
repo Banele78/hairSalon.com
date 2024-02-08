@@ -5,7 +5,9 @@ The aim of a salon application is to provide a platform for customers to book ap
 The main aim is to satisfy the customer’s needs and ensure that SalonStory delivers the perfect service as promised.
 
 ### Features
-1.***Appointment booking:***
+1.***Appointment booking.***
+
+
 -The application will help customers from waiting on queues by booking appointments online and it will also give the barber an idea on many customers will they have on the day.
 
 ***2.Types of hairstyles and prices.***
