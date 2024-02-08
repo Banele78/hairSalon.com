@@ -6,8 +6,7 @@ The main aim is to satisfy the customer’s needs and ensure that SalonStory del
 
 ### Features
 1.***Appointment booking.***
-
-  The application will help customers from waiting on queues by booking appointments online and it will also give the barber an idea on many customers will they have on the day.
+   The application will help customers from waiting on queues by booking appointments online and it will also give the barber an idea on many customers will they have on the day.
 
 ***2.Types of hairstyles and prices.***
 
