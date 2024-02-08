@@ -6,13 +6,17 @@ The main aim is to satisfy the customer’s needs and ensure that SalonStory del
 
 ### Features
 1.***Appointment booking.***
+
   The application will help customers from waiting on queues by booking appointments online and it will also give the barber an idea on many customers will they have on the day.
 
 ***2.Types of hairstyles and prices.***
--Customer will know how much they are going to spend depending on the type of hairstyle they want.
+
+Customer will know how much they are going to spend depending on the type of hairstyle they want.
 
 ***3.Tips on how maintain their hair.***
--The application will recommend some the best products that will make their hair look healthier. There will be tips on the application which will educate the customer to better understand the type of hair they have because some hair grows in different direction, some you have thick or thin hair and oily or dry hair.
+
+The application will recommend some the best products that will make their hair look healthier. There will be tips on the application which will educate the customer to better understand the type of hair they have because some hair grows in different direction, some you have thick or thin hair and oily or dry hair.
 
 ***4.Build customer satisfaction.***
--The purpose of this application is to make the life of the customer easy by allowing them to save some time and making a user-friendly application. 
+
+The purpose of this application is to make the life of the customer easy by allowing them to save some time and making a user-friendly application. 
