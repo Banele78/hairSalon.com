@@ -1,77 +1,27 @@
 <?php include ('serverStyle.php')?>
 
-<htm>
+<htm lang="en">
     <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
    
-    <link rel="stylesheet" href="css/styleStyle.css">
-    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="/hairSalon/clientSide/css/styleStyle.css">
+    <link rel="stylesheet" href="/hairSalon/clientSide/css/navbar.css">
  
     </head>
     <body>
     <div class="loader"></div>
-    <div class="navbar" id="myNavbar">
-<img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" class="left">
-<ul>
-
- <li><a href="home.php">Home</a></li>
- <li><a href="service.php">Service</a></li>
-   <li><a href="contact.php">Contact</a></li>
-    <li><a href="aboutUs.php">About</a></li>
-   
- </ul>
- <?php
-    if(!isset($_SESSION["username"])){
-    ?>
-    <div><a href="BHlogin.php" class="login"><?php echo "Log in"; ?></a></div>
-    <?php }else{?>
-      <div><a href="#" class="login"><?php echo "Hi". ",".$_SESSION["username"]; ?></a></div>
-      <?php }?>
-
-    
-
-      
-<!--code for the mobile navbar-->
-      <div class="mobile" >
-      
+    <div id="myNavbar">
 <div class="toggle_btn">
- <i class="fa-solid fa-bars"></i>
+<i></i>
 </div>
+<div class="dropdown_menu "></div>
 
-     
-
-<div class="image">
-<img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" class="">
 
 </div>
-<div class="name">
-<?php
-    if(isset($_SESSION["username"])){
-    ?>
-    <div><?php echo "Hi". ",".$_SESSION["username"]; ?></div>
-    <?php }?>
-      </div>
-
-</div>
-
-<!--dropDown menu for mobile navbar-->
-<div class="dropdown_menu ">
-<li><a href="home.php">Home</a></li>
- <li><a href="service.php">Service</a></li>
-   <li><a href="contact.php">Contact</a></li>
-    <li><a href="aboutUs.php">About</a></li>
-    <?php
-    if(!isset($_SESSION["username"])){
-    ?>
-    <li><a href="BHlogin.php" ><?php echo "Log in"; ?></a></li>
-    <?php }else{?>
-      <li><a href="#" ><?php echo "Settings"; ?></a></li>
-      <?php }?>
-
-</div>
- </div>
 
  <?php
 while($dt=mysqli_fetch_assoc($result_date2)){
@@ -100,7 +50,7 @@ while($dt=mysqli_fetch_assoc($result_date2)){
 while($s=mysqli_fetch_assoc($get)){
 ?>
 <div class="image">
-<img src="hairstyleImg/<?php echo $s['image']; ?>"  id="imageS" >
+<img src="/hairSalon/clientSide/hairstyleImg/<?php echo $s['image']; ?>"  id="imageS" >
 </div>
 <div class="bottom-left"><span class="image-texts"><?php echo $s['name']; ?>
 </span><br>R<?php echo $s['cost']; ?></div>
@@ -152,7 +102,7 @@ if ($count >= 7) {
 <?php
     if(!isset($_SESSION["username"])){
     ?>
-     <a href="BHlogin.php"><button class="submitButton" id="submitButton" onclick="submitForm();">Book appiontment</button>
+     <a href="/hairSalon/clientSide/BHlogin.php"><button class="submitButton" id="submitButton" onclick="submitForm();">Book appiontment</button>
     </a>
     <?php }else {?>
       
@@ -165,7 +115,8 @@ if ($count >= 7) {
 
 
     </body>
-    
+    <script src="/hairSalon/clientSide/navbar.js"></script>
+    <script src="/hairSalon/clientSide/footer.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="script.js"></script>
     <script>

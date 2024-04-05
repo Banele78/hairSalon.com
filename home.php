@@ -12,6 +12,7 @@ session_start();?>
       crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="css/homeStyle.css">
       <link rel="stylesheet" href="css/navbar.css">
+     
 <style>
  
 
@@ -20,63 +21,17 @@ session_start();?>
 </head>
 
 <body>
-<div class="navbar" id="myNavbar">
-<img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" class="left">
-<ul>
+<div  id="myNavbar">
 
- <li><a href="home.php">Home</a></li>
- <li><a href="service.php">Service</a></li>
-   <li><a href="contact.php">Contact</a></li>
-    <li><a href="aboutUs.php">About</a></li>
-   
- </ul>
- <?php
-    if(!isset($_SESSION["username"])){
-    ?>
-    <div><a href="BHlogin.php" class="login"><?php echo "Log in"; ?></a></div>
-    <?php }else{?>
-      <div><a href="#" class="login"><?php echo "Hi". ",".$_SESSION["username"]; ?></a></div>
-      <?php }?>
-<!--code for the mobile navbar-->
-      <div class="mobile" >
-      
 <div class="toggle_btn">
- <i class="fa-solid fa-bars"></i>
+<i  class="fa-solid fa-bars" ></i>
 </div>
+<div class="dropdown_menu "></div>
 
-<div class="image">
-<img src="https://t4.ftcdn.net/jpg/01/96/07/43/240_F_196074365_AlruXARNe3SYD7tUgvtqvTh2g01eHthI.jpg" class="">
-
-</div>
-<div class="name">
-<?php
-    if(isset($_SESSION["username"])){
-    ?>
-    <div><?php echo "Hi". ",".$_SESSION["username"]; ?></div>
-    <?php }?>
-      </div>
-
-</div>
-
-<!--dropDown menu for mobile navbar-->
-<div class="dropdown_menu ">
-<li><a href="home.php">Home</a></li>
- <li><a href="service.php">Service</a></li>
-   <li><a href="contact.php">Contact</a></li>
-    <li><a href="aboutUs.php">About</a></li>
-    <?php
-    if(!isset($_SESSION["username"])){
-    ?>
-    <li><a href="BHlogin.php" ><?php echo "Log in"; ?></a></li>
-    <?php }else{?>
-      <li><a href="#" ><?php echo "Settings"; ?></a></li>
-      <?php }?>
-
-</div>
  </div>
 
 <div>
-<h1><b>Welcome to the Salon storys<b><h1>
+
 </div>
 
 
@@ -85,20 +40,16 @@ session_start();?>
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
   
-    <img src="girls.jpg" >
+    <img src="3.webp" >
 	
 	
   </div>
 
-  <div class="mySlides fade">
-
-    <img src="pic5.webp">
-   
-  </div>
+ 
 
   <div class="mySlides fade">
     
-    <img src="salon.jpg" >
+    <img src="1.webp" >
   
 </div>
 <div style="text-align:center">
@@ -107,51 +58,46 @@ session_start();?>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 </div>
-<p>
-The salon storys is all about making our customres to look and feel better about themselves .
-The beauty and cosmetics industry is one of the few sectors <br>in which South African women dominate but beauty salons and 
-nail bars are industries that cater predominantly for women, but this is beginning to change. “Interestingly men are also increasingly making use of these services.
-</p>
-<div class="services">
-<a href="service.php"><button type="submit"><span></span>Services</button></a>
-<button type="button"><span></span>Tips</button>
+
+<div class="container">
+<!--first box-->
+<div class="box">
+<div class="icon">
+<i class="fa fa-clock-o" aria-hidden="true"></i>
 </div>
 
-</body>
-<footer>
-<div class="copy">&copy; 2023 Developer</div>
-<div class="links">
-      <span>Social Links</span>
-      <a href="#">facebook<i class="fab fa-facebook"></i></a>
-	  
-      <a href="#">twitter<i class="fab fa-twitter"></i></a>
-      <a href="#">instagram<i class="fab fa-instagram"></i></a>
-	  <p>Call: (011)-523-3678<br>
-	  WhatApp: 071-523-3648
-	  </p>
-	  
-    </div>
-</footer>
-<script>
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+<div class="content">
+<h3>Avoid the long<br> wait</h3>
+<p>book a amazing experiance with us now</p>
+<br>
+<a href="hairstyle.php">Book now</a>
+</div>
+</div>
 
-// Get the navbar
-var navbar = document.getElementById("myNavbar");
+<!--second box-->
+<div class="box">
+<div class="icon">
+<i class="fa fa-map-marker" aria-hidden="true"></i>
+</div>
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+<div class="content">
+<h3>Find your nearest<br> Salon</h3>
+<p>Quickly make your next<br>appointment in-store. </p>
+<br>
+<a href="a">Find store</a>
+</div>
+</div>
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+<!--third box-->
 
+</div>
 
+<div><p>jsajsha</p></div>
+
+<script src="/hairSalon/clientSide/navbar.js"></script>
+<script src="/hairSalon/clientSide/footer.js"></script>
+
+<script >
 //slide slow
 let slideIndex = 0;
 showSlides();
@@ -171,28 +117,12 @@ function showSlides() {
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 7000); // Change image every 2 seconds
 }
-
-//code to open and close the dropDown menu
-const toggleBtn=document.querySelector('.toggle_btn');
-const toggleBtnIcon=document.querySelector('.toggle_btn i');
-const dropDownMenu=document.querySelector('.dropdown_menu');
-
-toggleBtn.onclick=function(){
-  dropDownMenu.classList.toggle('open');
-  document.body.style.overflowY = dropDownMenu.classList.contains("open") ? "hidden" : "auto";
-  const isOpen=dropDownMenu.classList.contains('open');
- 
-
-  //switch icons
-  toggleBtnIcon.classList=isOpen
-  ? 'fa-solid fa-xmark'
-  : 'fa-solid fa-bars';
-}
-
-
 
 </script>
+</body>
+
+
 
 </html>

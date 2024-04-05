@@ -10,7 +10,7 @@ body{
 	width: 80%;
 	height:auto;
 	
-	margin-left:150px;
+	margin-left:5%;
 }
 
 
@@ -166,7 +166,7 @@ body{
 
   .message{
 	width: 100%;
-	height: 30px;
+	height: auto;
 	background-color: red;
 	position: sticky;
 	margin-top: -20px;
@@ -184,10 +184,148 @@ body{
   @media(max-width:999px){
 	.message{
 		margin-top: -50px;
-		height: 60px;
+		height: auto;
 		top:56px;
 		
 	  }
+
+	  .container{
+		width: 100%;
+		height:auto;
+		margin: -20px;
+		margin-left:-13px;
+	}
+
+	.container .image{
+		width:378px;
+		height:auto;
+		border-radius:0px;
+	}
+
+	.container .image img{
+		width:100%;
+		height:400px;
+		 object-fit: cover;
+	}
+
+	.image-texts{
+		font-size: 40px;
+	}
+	.bottom-left {
+		margin-left: 0px;
+	  
+	  font-size: 30px;
+	  
+	}
+
+	.time_slots{
+		width:509px;
+		height:auto;
+		margin-left:400px;
+		border:1px solid;
+		border-color: black;
+		margin-top:100px;
+		
+	}
+
+	.submitButton{
+		margin-left:360px;
+		border:none;
+		background-color: black;
+		color:#fff;
+		border-radius: 50%;
+		height: 35px;
+		cursor: pointer;
+	}
+	  
+	}
+
+  @media(max-width:900px){
+	
+	
+
+	.time_slots{
+		width:549px;
+		height:auto;
+		margin-left:15px;
+		border:1px solid;
+		border-color: black;
+		margin-top:300px;
+		
+	}
+
+	
   }
+  @media(max-width:690px){
+	.time_slots{
+		width:549px;
+		height:auto;
+		margin-left:15px;
+		border:1px solid;
+		border-color: black;
+		margin-top:10px;
+		
+	}
 
+	.submitButton{
+		margin-left:260px;
+		border:none;
+		background-color: black;
+		color:#fff;
+		border-radius: 50%;
+		height: 35px;
+		cursor: pointer;
+	}
+  }
+  @media(max-width:576px){
+	.container{
+		width: 80%;
+		height:auto;
+		margin: -20px;
+		margin-left:-13px;
+	}
 
+	.container .image{
+		width:378px;
+		height:auto;
+		border-radius:0px;
+	}
+
+	.container .image img{
+		width:100%;
+		height:400px;
+		 object-fit: cover;
+	}
+
+	.image-texts{
+		font-size: 40px;
+	}
+	.bottom-left {
+		margin-left: 2px;
+	  
+	  font-size: 30px;
+	  
+	}
+
+	.time_slots{
+		width:400px;
+		height:auto;
+		margin-left:5px;
+		border:1px solid;
+		border-color: black;
+		margin-top:10px;
+		
+	}
+
+	.submitButton{
+		margin-left:260px;
+		border:none;
+		background-color: black;
+		color:#fff;
+		border-radius: 50%;
+		height: 35px;
+		cursor: pointer;
+	}
+	
+
+  }
